@@ -26,16 +26,19 @@ Contact
 
 For any question regarding MicroPerf, please write at <microperf@exascale-computing.eu>.
 
-Current Contributors (alphabetical):
-    Jean Christophe Beyler
+Current Contributors:
+    * Jean Christophe Beyler, Thibault Fighiera, wrote the first versions of the three tools
+    * Nicolas Triquenaux and Jean-Philippe Halimi worked on the MicroLauncher tool
+    * Farid Chabane worked on the MicroCreator tool
+    * Erin Beyler reviewed and edited extensively the documentation
 
-Past Contributors (alphabetical):
-    Farid Chabane
-    William Jalby
-    Jean-Philippe Halimi
-    Christophe Lemuet
-    Nicolas Triquenaux
-    Stéphane Zuckerman
+Past Contributors:
+* The original MicroLauncher idea was done via a tool called Kerbe and was contributed by:
+    * Christophe Lemuet (main)
+    * Stéphane Zuckerman
+    * Xavier Le Pasteur
+    * Sid Touati
+    * William Jalby
 
 Last Remarks
 ============
@@ -44,3 +47,6 @@ MicroPerf's original development has been done in the Exascale Computing researc
 Intel, and UVSQ.
 
 
+
+
+Old Contributors:
