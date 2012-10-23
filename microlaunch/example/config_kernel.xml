@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<microlaunch>
+	<config>
+		<metaRepetition value="10" />
+		<repetition value="30" />
+		<dataSize value="8" />
+		<kernelName value="example/example0.c" />
+		<startVector value="16000" />
+		<!--<executeRepetition value="2" />
+		<baseName value="xml_test" />
+		<kernelFunction value="entryPoint" />
+		<initFunction value="initVectors" />
+		<endVector value="16000" />
+		<stepVector value="1" />
+		<iterationCount value="10000" />
+		<nbVector value="1" />
+		<cpuPin value="2" />
+		<maxStride value="1" />
+		<allocLib value="allocator/dedicated_arrays/dedicated_arrays.so" />
+		<evalLib value="timer/timer.so" />
+		<evalStart value="timer_start" />
+		<evalStop value="timer_stop" />
+		<evalInit value="timer_init" />
+		<evalClose value="timer_close" />
+		<vectSurveyor value="{(0,0,0);}" />
+		<vectorSpacing value="2" />
+		<ompPath value="/usr/lib/x86_64-linux-gnu" />
+		<outputDir value="output/" />
+		-<outputSameDir />
+		<sizeDummy value="3000000" />
+		<logOutput value="output/ml_output.txt" />-->
+	</config>
+</microlaunch>

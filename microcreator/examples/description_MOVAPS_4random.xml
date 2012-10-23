@@ -1,0 +1,111 @@
+<?xml version="1.0"?>
+<description>
+  <kernel>
+    <insert_code>
+      <file>examples/prologue.s</file>
+    </insert_code>
+  </kernel>
+
+  <kernel>
+    <!--instruction part -->
+    <randomize/>
+
+    <instruction>
+      <operation>movaps</operation>
+      <register>
+        <phyName>%xmm0</phyName>
+      </register>
+      <memory>
+        <register>
+          <name>r1</name>
+        </register>
+        <offset>0</offset>
+      </memory>
+    </instruction>
+
+    <instruction>
+      <operation>movaps</operation>
+      <memory>
+        <register>
+          <name>r1</name>
+        </register>
+        <offset>16</offset>
+      </memory>
+      <register>
+        <phyName>%xmm1</phyName>
+      </register>
+    </instruction>
+
+    <instruction>
+      <operation>movaps</operation>
+      <memory>
+        <register>
+          <name>r1</name>
+        </register>
+        <offset>32</offset>
+      </memory>
+      <register>
+        <phyName>%xmm2</phyName>
+      </register>
+    </instruction>
+
+    <instruction>
+      <operation>movaps</operation>
+      <memory>
+        <register>
+          <name>r1</name>
+        </register>
+        <offset>48</offset>
+      </memory>
+      <register>
+        <phyName>%xmm3</phyName>
+      </register>
+    </instruction>
+
+    <!--end instruction part -->
+    <!--features part-->
+    <induction>
+      <register>
+        <name>r1</name>
+      </register>
+      <increment>64</increment>
+      <offset>64</offset>
+    </induction>
+
+    <induction>
+      <register>
+        <phyName>%eax</phyName>
+      </register>
+      <increment>1</increment>
+      <not_affected_unroll/>
+    </induction>
+
+    <induction>
+      <register>
+        <name>r0</name>
+      </register>
+      <increment>-8</increment>
+      <linked>
+        <register>
+          <name>r1</name>
+        </register>
+      </linked>
+      <last_induction/>
+    </induction>
+
+    <branch_information>
+      <label>L6</label>
+      <test>jge</test>
+    </branch_information>
+  </kernel>
+
+  <kernel>
+    <insert_code>
+      <file>examples/epilogue.s</file>
+    </insert_code>
+  </kernel>
+  <hardware_detector>
+    <execute>../microdetect/microdetect ../microdetect/data/args.c ../microdetect/output</execute>
+    <information_file>../microdetect/output</information_file>
+  </hardware_detector>
+</description>

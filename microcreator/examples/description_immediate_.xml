@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<description>
+  <kernel>
+    <insert_code>
+      <file>examples/prologue.s</file>
+    </insert_code>
+  </kernel>
+  <kernel>
+    <instruction>
+      <operation>movss</operation>
+      <register>
+        <name>r0</name>
+      </register>
+      <immediate>
+        <min>5</min>
+        <max>10</max>
+        <progress>2</progress>
+      </immediate>
+    </instruction>
+  </kernel>
+  <kernel>
+    <insert_code>
+      <file>examples/epilogue.s</file>
+    </insert_code>
+  </kernel>
+  <hardware_detector>
+    <execute>../microdetect/microdetect ../microdetect/data/args.c ../microdetect/output</execute>
+    <information_file>../microdetect/output</information_file>
+  </hardware_detector>
+</description>

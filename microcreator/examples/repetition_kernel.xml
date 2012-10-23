@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<description>
+  <kernel>
+    <instruction>
+      <operation>movsd</operation>
+      <register>
+        <name>r0</name>
+      </register>
+      <memory>
+        <register>
+          <name>r</name>
+          <min>1</min>
+          <max>3</max>
+        </register>
+        <offset>0</offset>
+      </memory>
+    </instruction>
+    <instruction>
+      <operation>movss</operation>
+      <register>
+        <name>r0</name>
+      </register>
+      <memory>
+        <register>
+          <name>r</name>
+          <min>1</min>
+          <max>3</max>
+        </register>
+        <offset>0</offset>
+      </memory>
+    </instruction>
+    <repetition>
+      <min>1</min>
+      <max>3</max>
+    </repetition>
+    <unrolling>
+      <min>1</min>
+      <max>3</max>
+    </unrolling>
+  </kernel>
+  <hardware_detector>
+    <execute>../microdetect/microdetect ../microdetect/data/args.c ../microdetect/output</execute>
+    <information_file>../microdetect/output</information_file>
+  </hardware_detector>
+</description>

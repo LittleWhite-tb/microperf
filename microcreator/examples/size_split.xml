@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<description>
+  <kernel>
+    <instruction_mdl>
+      <load>
+        <size>224</size>
+        <offset>16</offset>
+        <source>
+          <name>m1</name>
+        </source>
+        <destination>
+          <name>x</name>
+        </destination>
+      </load>
+    </instruction_mdl>
+    <insert_code>
+      <instruction>blabla</instruction>
+    </insert_code>
+    <instruction_mdl>
+      <load>
+        <size>160</size>
+        <offset>0</offset>
+        <source>
+          <name>m1</name>
+        </source>
+        <destination>
+          <name>x</name>
+        </destination>
+      </load>
+    </instruction_mdl>
+  </kernel>
+  <hardware_detector>
+    <execute>../microdetect/microdetect ../microdetect/data/args.c ../microdetect/output</execute>
+    <information_file>../microdetect/output</information_file>
+  </hardware_detector>
+</description>

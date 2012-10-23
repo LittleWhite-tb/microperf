@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<description>
+  <kernel>
+    <insert_code>
+      <file>examples/prologue.s</file>
+    </insert_code>
+  </kernel>
+  <kernel>
+    <!--instruction part -->
+    <!--allow instructions to be randomized in benchmarks-->
+    <instruction>
+      <operation>movaps</operation>
+      <memory>
+        <register>
+          <name>r1</name>
+        </register>
+        <offset>0</offset>
+      </memory>
+      <register>
+        <phyName>%xmm</phyName>
+        <min>0</min>
+        <max>8</max>
+      </register>
+      <swap_after_unroll/>
+    </instruction>
+    <!--end instruction part -->
+    <!--features part-->
+    <unrolling>
+      <min>1</min>
+      <max>8</max>
+      <progress>1</progress>
+    </unrolling>
+    <induction>
+      <register>
+        <name>r1</name>
+      </register>
+      <increment>16</increment>
+      <offset>16</offset>
+    </induction>
+    <induction>
+      <register>
+        <phyName>%eax</phyName>
+      </register>
+      <increment>1</increment>
+      <not_affected_unroll/>
+    </induction>
+    <induction>
+      <register>
+        <name>r0</name>
+      </register>
+      <increment>-4</increment>
+      <linked>
+        <register>
+          <name>r1</name>
+        </register>
+      </linked>
+      <last_induction/>
+    </induction>
+    <branch_information>
+      <label>L6</label>
+      <test>jge</test>
+    </branch_information>
+  </kernel>
+  <kernel>
+    <insert_code>
+      <file>examples/epilogue.s</file>
+    </insert_code>
+  </kernel>
+  <hardware_detector>
+    <execute>../microdetect/microdetect ../microdetect/data/args.c ../microdetect/output</execute>
+    <information_file>../microdetect/output</information_file>
+  </hardware_detector>
+</description>

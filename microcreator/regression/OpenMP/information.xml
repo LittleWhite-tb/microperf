@@ -1,0 +1,7 @@
+<root>
+    <arguments value="$PATH/add_omp.xml"/>
+    <command value="./microcreator"/>
+    <expected_output value="$PATH/example00000.c"/>
+    <obtained_output value="output/example00000.c"/>
+    <change_path value=".."/>
+</root>

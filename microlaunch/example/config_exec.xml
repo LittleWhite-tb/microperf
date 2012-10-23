@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<microlaunch>
+	<config>
+		<metaRepetition value="100" />
+		<repetition value="40" />
+		<executeRepetition value="2" />
+		<baseName value="xml_test" />
+		<execName value="ls" />
+		<execArgs value="-tla" />
+		<!--<execOutput value="output/file.txt" />-->
+		<suppressOutput />
+	</config>
+</microlaunch>

@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<Mdl>
+<MetaData>
+	<IO_stream>
+	</IO_stream>
+	<Parameters>
+		<MetaVar Name="stride0" mode="fixed" value="32" />
+		<MetaAdd Name="RDI" mode="fixed" value="32" />
+		<MetaAdd Name="R12" mode="fixed" value="0" />
+	</Parameters>
+</MetaData>
+<Data> 
+<Array ID="0" >
+	<Context> 
+		<Address val_address="$RDI" /> 
+	</Context> 
+</Array> 
+<Array ID="1" >
+	<Context> 
+		<Address val_address="$R12" /> 
+	</Context> 
+</Array> 
+</Data>
+<Body Loop_trip="$n">
+	<ukernel>
+		<Add_Mul_Flop>
+			<First_add add="1" />
+			<Ratio ratio="9/13" />
+			<Count count="22" />
+			<Unrolling val="1" /> 
+		</Add_Mul_Flop>
+		<Input>
+		<MemVar ID="0" vStride="stride0" offset="8" size="64"/>
+		<MemVar ID="0" vStride="stride0" offset="1032" size="64"/>
+		<MemVar ID="0" vStride="stride0" offset="1024" size="64"/>
+		<MemVar ID="0" vStride="stride0" offset="1040" size="64"/>
+		<MemVar ID="0" vStride="stride0" offset="16" size="64"/>
+		<MemVar ID="0" vStride="stride0" offset="0" size="64"/>
+		<MemVar ID="0" vStride="stride0" offset="24" size="64"/>
+		<MemVar ID="0" vStride="stride0" offset="2056" size="64"/>
+		<MemVar ID="0" vStride="stride0" offset="1048" size="64"/>
+		<MemVar ID="0" vStride="stride0" offset="1040" size="64"/>
+		<MemVar ID="0" vStride="stride0" offset="1056" size="64"/>
+		<MemVar ID="0" vStride="stride0" offset="2064" size="64"/>
+		<MemVar ID="0" vStride="stride0" offset="32" size="64"/>
+		<MemVar ID="0" vStride="stride0" offset="2048" size="64"/>
+		<MemVar ID="0" vStride="stride0" offset="1056" size="64"/>
+		<MemVar ID="0" vStride="stride0" offset="16" size="64"/>
+		<MemVar ID="0" vStride="stride0" offset="32" size="64"/>
+		<MemVar ID="0" vStride="stride0" offset="2064" size="64"/>
+		<MemVar ID="0" vStride="stride0" offset="2080" size="64"/>
+		</Input>
+		<Output>
+		<MemVar ID="1" vStride="stride0" offset="1048" size="64"/>
+		</Output>
+	</ukernel>
+	<ukernel>
+		<Add_Mul_Flop>
+			<First_add add="1" />
+			<Ratio ratio="0/3" />
+			<Count count="3" />
+			<Unrolling val="1" /> 
+		</Add_Mul_Flop>
+		<Input>
+		<MemVar ID="0" vStride="stride0" offset="2072" size="64"/>
+		<MemVar ID="0" vStride="stride0" offset="2080" size="64"/>
+		</Input>
+		<Output>
+		<MemVar ID="1" vStride="stride0" offset="1032" size="64"/>
+		</Output>
+	</ukernel>
+</Body>
+</Mdl>

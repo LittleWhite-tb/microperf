@@ -1,0 +1,7 @@
+<root>
+    <arguments value="$PATH/description_MOVSD_ur_L_LL_LLL.xml"/>
+    <command value="./microcreator"/>
+    <expected_output value="$PATH/example00509.s"/>
+    <obtained_output value="output/example00509.s"/>
+    <change_path value=".."/>
+</root>

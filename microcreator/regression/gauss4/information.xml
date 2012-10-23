@@ -1,0 +1,7 @@
+<root>
+    <arguments value="$PATH/micro_creator2.xml"/>
+    <command value="./microcreator"/>
+    <expected_output value="$PATH/example00000.s"/>
+    <obtained_output value="output/example00000.s"/>
+    <change_path value=".."/>
+</root>

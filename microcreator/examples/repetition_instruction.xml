@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<description>
+  <kernel>
+    <instruction>
+      <operation>STORE</operation>
+      <register>
+        <name>r0</name>
+      </register>
+      <memory>
+        <register>
+          <name>r1</name>
+        </register>
+        <offset>0</offset>
+      </memory>
+      <repetition>
+        <min>1</min>
+        <max>3</max>
+        <progress>1</progress>
+      </repetition>
+    </instruction>
+    <instruction>
+      <operation>LOAD</operation>
+      <register>
+        <name>r0</name>
+      </register>
+      <memory>
+        <register>
+          <name>r1</name>
+        </register>
+        <offset>0</offset>
+      </memory>
+      <repetition>
+        <min>1</min>
+        <max>2</max>
+        <progress>1</progress>
+      </repetition>
+    </instruction>
+  </kernel>
+  <hardware_detector>
+    <execute>../microdetect/microdetect ../microdetect/data/args.c ../microdetect/output</execute>
+    <information_file>../microdetect/output</information_file>
+  </hardware_detector>
+</description>

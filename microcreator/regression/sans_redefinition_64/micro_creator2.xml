@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<description>
+<kernel>
+	<insert_code><file>examples/prologue.s</file></insert_code>
+</kernel>
+
+<kernel>
+	<unrolling>
+		<min>1</min>
+		<max>8</max>
+		<progress>5</progress>
+	 </unrolling>
+
+	<induction>
+		<register>
+			 <phyName>%eax</phyName>
+		</register>
+		<increment>1</increment>
+		 <not_affected_unroll/>
+	</induction>
+
+	<induction>
+		<register>
+			<name>r0</name>
+		</register>
+		<increment>-1</increment>
+		 <not_affected_unroll/>
+		 <last_induction/>
+	</induction>
+
+	<branch_information>
+		<label>L6</label>
+		<test>jge</test>
+	</branch_information>
+</kernel>
+
+<MDLBasicSchedule>
+	<nbBundle>4</nbBundle>
+</MDLBasicSchedule>
+
+ <kernel>
+	<insert_code><file>examples/epilogue.s</file></insert_code>
+ </kernel>
+
+<hardware_detector>
+	<execute>microdetect/microdetect microdetect/data/args.c microdetect/output</execute>
+  	<information_file>microdetect/output</information_file>
+ </hardware_detector>
+</description>

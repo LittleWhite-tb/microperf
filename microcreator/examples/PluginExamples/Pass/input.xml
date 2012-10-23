@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<description>   
+    <kernel>
+        <instruction>     
+            <operation>addpd</operation>
+
+            <register>
+                <phyName>%xmm</phyName>
+                <min>0</min>
+                <max>8</max>
+            </register>
+
+            <register>
+                <phyName>%xmm</phyName>
+                <min>0</min>
+                <max>8</max>
+                </register>   
+            </instruction> 
+
+            <unrolling>
+                <min>1</min>
+                <max>8</max>
+                <progress>1</progress>
+            </unrolling>
+    </kernel>
+
+    <kernel>
+        <instruction>     
+            <operation>mulpd</operation>
+
+            <register>
+                <phyName>%xmm</phyName>
+                <min>0</min>
+                <max>8</max>
+            </register>
+
+            <register>
+                <phyName>%xmm</phyName>
+                <min>0</min>
+                <max>8</max>
+                </register>   
+            </instruction> 
+
+            <unrolling>
+                <min>1</min>
+                <max>8</max>
+                <progress>1</progress>
+                </unrolling>
+    </kernel>
+</description>
