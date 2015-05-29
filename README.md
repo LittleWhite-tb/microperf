@@ -7,7 +7,7 @@ MicroPerf is a combination of three different tools:
     - MicroDetector: an interface between the two previous tools
 
 The documentation for the MicroPerf tools can be found here:
-http://code.google.com/p/microperf/wiki/main?tm=6
+https://github.com/LittleWhite-tb/microperf/wiki
 
 
 Installation
