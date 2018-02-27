@@ -27,6 +27,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 
 #include <map>
 #include <vector>
+#include <unistd.h>
 
 Driver::Driver (char *s, char *d)
 {
