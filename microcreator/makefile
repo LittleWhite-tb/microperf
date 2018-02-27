@@ -3,7 +3,7 @@ EXE=microcreator
 MAIN_OBJ := $(patsubst %.cpp,obj/%.o,$(wildcard *.cpp))
 CORE_OBJ := $(patsubst Core/Src/%.cpp,obj/%.o,$(wildcard Core/Src/*.cpp))
 PASS_OBJ := $(patsubst Passes/Src/%.cpp,obj/%.o,$(wildcard Passes/Src/*.cpp))
-LIBS = `pkg-config libxml++-2.6 --cflags --libs`
+LIBS = `pkg-config libxml++-2.6 --cflags --libs` -ldl
 
 OPT_INCLUDE = -ICore/Include -IPasses/Include
 OPT = -O3 -Wall -Wextra -g $(OPT_INCLUDE) 
